@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BM 2 Sign In</title>
+    <link rel="stylesheet" href="/stylesheets/bm2_sign_up.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lily+Script+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="sign_in">
+        <div class="form-wrapper">
+            <header class="form-head">
+                <h2>Sign In</h2>
+                <p>Please enter your username and password to continue</p>
+            </header>
+            <form action="/bm2/api/login" method="post">
+                <div class="email-form form-items">
+                    <label for="email_address">Email:
+                        <input type="email_address" name="email_address" required></label>
+                </div>
+                <div class="password-form form-items">
+                    <label for="password">Password:
+                        <input type="password" name="password" required></label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
