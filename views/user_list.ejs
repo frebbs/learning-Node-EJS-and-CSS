@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+    <body>
+        <div class="main-container">
+            <% user_obj.forEach( (user) => { %>
+                <div class="user">
+                    <p>Name: <%= user.f_name %> <%= user.l_name %></p>
+                    <p>Username: <%= user.username %></p>
+                    <p>Email: <%= user.email_address %></p>
+                    <br>
+                    <form action="/api/delete" method="post">
+                        <button id="user"  name="user" value="<%= user.id %>">Delete Record</button>
+                    </form>
+                </div>
+            <% })%>
+        </div>
+    </body>
+</html>

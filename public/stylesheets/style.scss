@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: aliceblue;
+
+    .main-container {
+
+
+      // for the form to sign up
+      .signup-form {
+        padding: 5px;
+        margin: 10px;
+        max-width: 40%;
+      }
+        // For displaying the users
+      .user{
+        border: 2px solid black;
+        //padding: 2rem;
+        padding: 5px;
+        margin: 10px;
+        max-width: 40%;
+      }
+    }
+  }
+}
+
+
+
+

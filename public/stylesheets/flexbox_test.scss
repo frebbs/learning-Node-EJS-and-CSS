@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+    body {
+
+      header {
+        // Navigation
+        nav {
+
+          ul {
+            display: flex;
+            padding: 2rem;
+            justify-content: space-evenly;
+            align-items: center;
+
+            li {
+              list-style: none;
+            }
+
+            a {
+              color: black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      // Section Hero
+      section.hero {
+        min-height: 90vh;
+        background-image: url("/images/coding_screen2.jpg");
+        background-size: cover;
+        background-position: center;
+        color: lightcyan;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+          text-align: center;
+          margin: 2rem;
+        }
+
+        button {
+          padding: 1rem 2rem;
+          background: orangered;
+          border-radius: 50px;
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+      // Section Intro
+      section.intro {
+        display: flex;
+        flex-wrap: wrap;
+
+        .intro-image {
+          flex: 1 1 30rem;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .intro-text {
+          flex: 1 1 30rem;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          background: rgb(66,34,48);
+          background: linear-gradient(170deg, rgba(66,34,48,1) 10%, rgba(42,45,48,1) 23%);
+          font-size: 1.6rem;
+
+          p {
+            padding: 1rem;
+          }
+
+          h2 {
+            margin-bottom: 5rem;
+          }
+        }
+      }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

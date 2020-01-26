@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  //  Some Global sizes to start
+  @media screen and (max-width: 888px) {
+    font-size: 45%;
+    .cloud {
+      height: 40rem;
+    }
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 4.8rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  h4, h5 {
+    font-size: 2.8rem;
+  }
+
+  li, button, label, input, p {
+    font-size: 2rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  button {
+    border-style: none;
+    padding: 2rem 6rem;
+    background: #4c6e97;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+    border-radius: 40px;
+    outline: none;
+  }
+
+
+  button:hover {
+    background: #27394e;
+  }
+
+  // Animations
+
+  @keyframes cloudAnimation {
+    from {
+    transform: translate(10%, -10%);
+    }
+    to {
+      transform: translate(0%, 0%);
+    }
+
+  }
+  // Entire Content starts here
+  body {
+    font-family: "Poppins", sans-serif;
+
+
+    //  Nav and Hero sections
+    #main-head {
+      background: #131c27;
+      color: white;
+
+      // Navigation
+      nav {
+        min-height: 5vh;
+        display: flex;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        flex-wrap: wrap;
+
+        //Logo
+        h1 {
+          flex: 1 1 40rem;
+          font-family: 'Lily Script One', sans-serif;
+          text-decoration: underline;
+        }
+
+        @media screen and (max-width: 640px) {
+          h1 {
+            padding: 1rem;
+          }
+        }
+        //  Links
+        ul {
+          display: flex;
+          flex: 1 1 40rem;
+          justify-content: space-evenly;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        nav {
+          text-align: center;
+        }
+      }
+    }
+
+    // Hero Section
+    #hero {
+      min-height: 95vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url('/bm2/img/landing-page.jpg') no-repeat center;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1), 0 20px 20px rgba(0,0,0,0.1);
+
+      ul li  {
+        padding: 2rem;
+
+        .small {
+          font-size: 60%;
+        }
+      }
+      h2 {
+        padding: 2rem;
+      }
+
+      button {
+        margin: 3rem;
+      }
+    }
+
+    // Location Section
+    #signup-benefits {
+      min-height: 100vh;
+      background: url('/bm2/img/new-york-page.png') no-repeat center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      header {
+        width: 90%;
+        margin: auto;
+
+        h2 {
+          padding: 1rem 0;
+          text-decoration: underline;
+          font-size: 3rem;
+          text-align: center;
+        }
+
+        h3 {
+          padding: 4rem 0;
+          color: black;
+          font-weight: bolder;
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        .cloud {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        .moving-cloud1 {
+          z-index: -1;
+          animation: cloudAnimation 27s infinite alternate ease-in-out;
+        }
+
+        .moving-cloud2 {
+          top: 10%;
+          opacity: 0.7;
+          z-index: -2;
+          animation: cloudAnimation 38s infinite alternate ease-in-out;
+        }
+      }
+    }
+
+    // Benefits section
+    #benefits {
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1), 0 20px 20px rgba(0,0,0,0.1);
+
+      .benefits-head {
+        background: #343c44;
+        padding: 3rem;
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: whitesmoke;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1), 0 20px 20px rgba(0,0,0,0.1);
+
+        h2 {
+          font-size: 4rem;
+          text-decoration: underline;
+        }
+        h3 {
+          padding: 1.5rem;
+        }
+      }
+
+      .cards {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        min-height: 70vh;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        .card {
+          flex: 2 2 25rem;
+          min-height: 40vh;
+          margin: 2rem 3rem;
+          box-shadow: 0 10px 10px rgba(0,0,0,0.1), 0 20px 20px rgba(0,0,0,0.1);
+          text-align: center;
+          background-color: #87929d;
+
+          .img {
+            max-width: 15%;
+            margin: 2rem;
+          }
+
+          h4, p {
+            padding-top: 4rem;
+          }
+
+          .card-icon {
+            align-content: center;
+            min-height: 7rem;
+            background-color: white;
+            border: 1px black solid;
+            padding: 1rem;
+          }
+
+        }
+      }
+    }
+
+    #signup {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("/bm2/img/contact-mountain.png") no-repeat;
+      background-size: cover;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1), 0 20px 20px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .form-wrapper {
+        background: rgba(19, 28, 39, 0.5);
+        width: 60%;
+        color: white;
+        border-radius: 40px;
+
+        label {
+          margin: 0 4rem;
+        }
+
+        button {
+          width: 100%;
+          padding: 2rem;
+          margin-top: 8rem;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+
+      .form-head {
+        text-align: center;
+        padding: 4rem;
+      }
+
+      .form-items {
+        padding: 3rem;
+        text-align: center;
+      }
+    }
+    footer {
+      color: white;
+      background-color: rgba(19, 28, 39, 0.9);
+
+      h5 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="signup-form">
+        <form action="/api/submit" method="post">
+          <label for="username">Username: <input type="text" name="username"></label><br>
+          <label for="email">Email: <input type="text" name="email_address"></label><br>
+          <label for="f_name">First Name: <input type="text" name="f_name"></label><br>
+          <label for="l_name">Last Name: <input type="text" name="l_name"></label><br>
+          <label for="password">Password: <input type="password" name="password"></label>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

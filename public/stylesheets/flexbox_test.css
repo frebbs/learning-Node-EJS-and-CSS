@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+  * body header nav ul {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+    align-items: center; }
+    * body header nav ul li {
+      list-style: none; }
+    * body header nav ul a {
+      color: black;
+      text-decoration: none; }
+  * body section.hero {
+    min-height: 90vh;
+    background-image: url("/images/coding_screen2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: lightcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    * body section.hero h2 {
+      text-align: center;
+      margin: 2rem; }
+    * body section.hero button {
+      padding: 1rem 2rem;
+      background: orangered;
+      border-radius: 50px;
+      color: white;
+      font-size: 1.2rem; }
+  * body section.intro {
+    display: flex;
+    flex-wrap: wrap; }
+    * body section.intro .intro-image {
+      flex: 1 1 30rem; }
+      * body section.intro .intro-image img {
+        width: 100%; }
+    * body section.intro .intro-text {
+      flex: 1 1 30rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background: #422230;
+      background: linear-gradient(170deg, #422230 10%, #2a2d30 23%);
+      font-size: 1.6rem; }
+      * body section.intro .intro-text p {
+        padding: 1rem; }
+      * body section.intro .intro-text h2 {
+        margin-bottom: 5rem; }
+
+/*# sourceMappingURL=flexbox_test.css.map */
