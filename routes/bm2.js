@@ -12,7 +12,7 @@ client.connect()
 router.post('/api/submit', (req, res) => {
   const { username, email_address, f_name, l_name, password } = req.body;
   // const hashed_pw = bcrypt.hashSync(password, saltRounds);
-
+    console.log(req.body)
 
   client.query('INSERT INTO bookmark_users (username, email_address, f_name, l_name, password) VALUES($1, $2, $3, $4, $5);',
       [username, email_address, f_name, l_name, password], (err, results) => {

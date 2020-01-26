@@ -3,5 +3,6 @@ create table bookmark_users (
     f_name varchar(40) not null,
     l_name varchar(40) not null,
     username varchar(40) not null unique ,
-    email_address varchar(60) not null unique
+    email_address varchar(60) not null unique,
+    password varchar(256) not null
                    );

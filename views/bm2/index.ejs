@@ -17,9 +17,10 @@
         <nav>
             <h1 id="logo">Bookmark Manager 2.0</h1>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a href="#signup-benefits">Why Sign Up</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#signup">Sign In</a></li>
             </ul>
         </nav>
     </header>
@@ -68,7 +69,7 @@
             <header class="form-head">
                 <h2>Sign Up</h2>
             </header>
-            <form action="">
+            <form action="/bm2/api/submit" method="post">
                 <div class="f_name-form form-items">
                     <label for="f_name">First Name:
                     <input type="text" name="f_name" required></label>
@@ -86,8 +87,8 @@
                     <input type="password" name="password" required></label>
                 </div>
                 <div class="email-form form-items">
-                    <label for="email">Email:
-                    <input type="email" name="email" required></label>
+                    <label for="email_address">Email:
+                    <input type="email_address" name="email_address" required></label>
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
