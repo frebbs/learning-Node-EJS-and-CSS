@@ -11,15 +11,13 @@ client.connect()
     .then(() => console.log("Postgres Connected ok, no errors"))
     .catch(e => console.log);
 
+
 /* POST users listing*/
+
 router.post('/api/submit', (req, res) => {
   const { username, email_address, f_name, l_name, password } = req.body;
-  const hashed_pw = bcrypt.hashSync(password, saltRounds);
-
-    console.log(hashed_pw);
-
   client.query('INSERT INTO bookmark_users (username, email_address, f_name, l_name, password) VALUES($1, $2, $3, $4, $5);',
-      [username, email_address, f_name, l_name, hashed_pw], (err, results) => {
+      [username, email_address, f_name, l_name, password], (err, results) => {
         if (err) {
           console.log(err);
         }
@@ -34,9 +32,6 @@ router.post('/api/login', (req, res) => {
     client.query('SELECT * FROM bookmark_users WHERE email_address = $1 AND password = $2', [email_address, password], (err, results) => {
         if (err) {
             console.log(err)
-        }
-        if (results.rows.length === 0) {
-
         } else {
             console.log(results);
             res.redirect('/bm2');
