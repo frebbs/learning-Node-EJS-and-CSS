@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
+const session = require('express-session');
 
 require('dotenv').config();
 
@@ -27,7 +28,11 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(session({
+  secret: 'sdyjfg4iurdfghriuhkv',
+  saveUninitialized: false,
+  resave: false
+}));
 app.use('/', indexRouter);
 app.use('/bm2', bm2);
 

@@ -16,7 +16,7 @@ router.post('/api/submit', (req, res) => {
   const { username, email_address, f_name, l_name, password } = req.body;
   const hashed_pw = bcrypt.hashSync(password, saltRounds);
 
-    console.log(req.body);
+    console.log(hashed_pw);
 
   client.query('INSERT INTO bookmark_users (username, email_address, f_name, l_name, password) VALUES($1, $2, $3, $4, $5);',
       [username, email_address, f_name, l_name, hashed_pw], (err, results) => {
@@ -29,12 +29,25 @@ router.post('/api/submit', (req, res) => {
 });
 
 router.post('/api/login', (req, res) => {
-    console.log(req.body);
-    res.redirect('/bm2')
+    const {email_address, password} = req.body;
+
+    client.query('SELECT * FROM bookmark_users WHERE email_address = $1 AND password = $2', [email_address, password], (err, results) => {
+        if (err) {
+            console.log(err)
+        }
+        if (results.rows.length === 0) {
+
+        } else {
+            console.log(results);
+            res.redirect('/bm2');
+        }
+    });
 });
+
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
+    console.log(req.session.user_id);
   res.render('bm2/index')
 });
 
